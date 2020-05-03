@@ -5,7 +5,7 @@ const from = process.env.TWILIO_NUMBER;
 const twilio = require('twilio');
 const client = new twilio(accountSid, authToken);
 
-function sender(to) {
+function buildMsgSender(to) {
     return function message(body) {
         return client.messages.create({ from, to, body });
     }
