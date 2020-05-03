@@ -24,9 +24,9 @@ Here's an example of how this script would be used from the node repl:
 ```javascript
 > .load ./sms.js
 
-> toFakePerson = sender('+15555555555')
+> sendMsgToFakeNumber = buildMsgSender('+15555555555')
 
-> toFakePerson('Some message')
+> sendMsgToFakeNumber('Some message')
 ```
 
 The above would result in the phone number +15555555555 receiving an SMS reading "Some message".
